@@ -1,14 +1,28 @@
 import styled from 'styled-components'
 
-export const Container = styled.aside`
+interface ContainerProps {
+  isMenuOpen: boolean
+}
+
+export const Container = styled.aside<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.red};
-  width: 7.75rem;
+
+  ${({ isMenuOpen }) =>
+    isMenuOpen
+      ? `width: 16.3rem;`
+      : `width: 7.75rem;
+  `}
+
+  /* width: 7.75rem; */
+  /* width: 16.3rem; */
+
   min-height: 100vh;
   padding: 2rem 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: width 0.3s;
 
   button {
     background: none;
@@ -30,7 +44,7 @@ export const Container = styled.aside`
       gap: 1.5rem;
     }
 
-    li {      
+    li {
       a {
         width: fit-content;
         position: relative;
