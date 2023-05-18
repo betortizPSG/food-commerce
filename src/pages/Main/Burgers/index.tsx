@@ -54,8 +54,6 @@ export default function Burgers() {
     },
   ]
 
-  console.log('data', data)
-
   return (
     <div>
       <Head title='Hambúrgueres' description='Nossos melhores burgues' />
