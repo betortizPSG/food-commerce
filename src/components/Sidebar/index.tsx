@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Container } from './styles'
+import { NavLink } from 'react-router-dom'
 import { ReactComponent as BurgerIcon} from '../../assets/burger.svg'
 import { ReactComponent as PizzaIcon} from '../../assets/pizza.svg'
 import { ReactComponent as SodaPopIcon} from '../../assets/soda.svg'
@@ -27,10 +28,10 @@ export const Siderbar = () => {
         </button>
         <nav>
           <ul>
-            <li><a href="#" className='active'><BurgerIcon /><span>hamburgues</span></a></li>
-            <li><a href="#" ><PizzaIcon /><span>Pizzas</span></a></li>
-            <li><a href="#" ><SodaPopIcon /><span>Bebidas</span></a></li>
-            <li><a href="#" ><IceCreamIcon /><span>Sobremesas</span></a></li>
+            <li><NavLink to="/" ><BurgerIcon /><span>Hamburgues</span></NavLink></li>
+            <li><NavLink to="pizzas" ><PizzaIcon /><span>Pizzas</span></NavLink></li>
+            <li><NavLink to="drinks" ><SodaPopIcon /><span>Bebidas</span></NavLink></li>
+            <li><NavLink to="ice-creams" ><IceCreamIcon /><span>Sobremesas</span></NavLink></li>
           </ul>
         </nav>
       </Container>
