@@ -1,10 +1,11 @@
 import CurrencyFormat from '../../helpers/CurrencyFormat'
+import { SnackData } from '../../interfaces/SnackData'
 import SkeletonSnack from './SkeletonSnack'
 import { Container } from './styles'
 import { FiPlus } from 'react-icons/fi'
 
 interface SnackProps {
-  snacks: any[]
+  snacks: SnackData[]
 }
 
 export default function Snack({ snacks }: SnackProps) {
