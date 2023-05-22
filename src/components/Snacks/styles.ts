@@ -12,6 +12,24 @@ export const Container = styled.div`
     padding: 1.75rem 1.5rem;
     border-radius: 4px;
 
+    span {
+      position: absolute;
+      top: -0.7rem;
+      right: -0.7rem;
+
+      background: ${({ theme }) => theme.colors.red};
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+
     h2 {
       margin-bottom: 0.75rem;
       font-weight: 700;
