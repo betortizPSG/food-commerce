@@ -103,6 +103,8 @@ export const Container = styled.main`
             fill: ${({ theme }) => theme.colors.yellow};
             width: 1.5rem;
             height: 1.5rem;
+          }
+        }
       }
     }
   }
