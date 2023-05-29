@@ -3,7 +3,7 @@ interface HeadProps {
   description?: string
 }
 
-export default function Head({ title, description = ''}: HeadProps) {
+export function Head({ title, description = ''}: HeadProps) {
   document.title = `Food Commerce | ${title}`
   document.querySelector('meta[name="description"]')?.setAttribute('content', description)
   return null

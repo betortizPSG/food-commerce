@@ -53,7 +53,7 @@ export function CartProvider({ children }: CartProviderProps) {
           : item,
       )
 
-      console.log(`newCart atualiza ${snack.name} ${snack.name}}`, newCart)
+      console.log(`Carrinho atualizado ${snack.name} ${snack.name}}`, newCart)
       toast.success(`${snackEmoji(snack.snack)} Carrinho atualizado!`)
       setCart(newCart)
       return // para a execução da função
@@ -65,7 +65,7 @@ export function CartProvider({ children }: CartProviderProps) {
     const newCart = [...cart, newSnack] // adiciona o novo item no carrinho (push)
 
     toast.success(`${snackEmoji(snack.snack)} ${snack.name} adicionado ao carrinho!`)
-    console.log(`newCart ${snack.name}`, newCart)
+    console.log(`Adicionado ao carrinho ${snack.name}`, newCart)
 
     setCart(newCart)
   }

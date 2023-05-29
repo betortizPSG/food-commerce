@@ -1,4 +1,4 @@
-import CurrencyFormat from '../../helpers/CurrencyFormat'
+import { CurrencyFormat } from '../../helpers/CurrencyFormat'
 import { SnackData } from '../../interfaces/SnackData'
 import { useCart } from '../../Hooks/useCart'
 import SkeletonSnack from './SkeletonSnack'
@@ -17,11 +17,10 @@ export default function Snack({ snacks }: SnackProps) {
       {!snacks.length
         ? [1, 2, 3, 4].map((n) => <SkeletonSnack key={n} />)
         : snacks.map((snack) => {
-
             const snackExistent = cart.find(
               (item) => item.id === snack.id && item.snack === snack.snack,
             )
-            
+
             return (
               <div key={snack.id} className='snack'>
                 {snackExistent && <span>{snackExistent.quantity}</span>}
